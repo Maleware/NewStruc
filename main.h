@@ -1,0 +1,3 @@
+
+#define EXAMPLE_SUCCESS 0
+#define EXAMPLE_FAIL 101
