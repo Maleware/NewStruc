@@ -8,32 +8,40 @@ OBJDIR = obj
 BINDIR = bin
 
 SRC = $(wildcard *.c) $(wildcard ex*/*.c)
-OBJ = $(SRC:%.c=$(OBJDIR)/%.o)
-DEP = $(SRC:%.c=$(OBJDIR)/%.d)
+OBJ = $(SRC:%.c=%.o)
+DEP = $(SRC:%.c=%.d)
+
+DRDIR = 
 
 all: release debug
 
+debug: CFLAGS += -g
+debug: DRDIR = debug
 debug: $(BINDIR)/debug/main
 
+release: CFLAGS += -O3
+release: DRDIR = release
 release: $(BINDIR)/release/main
 
-$(BINDIR)/debug/main: $(OBJ)
-	$(LD) $(LDFLAGS) $^ -g -o $@
+$(BINDIR)/debug/main: $(OBJ:%.o=$(OBJDIR)/debug/%.o)
+	$(LD) $(LDFLAGS) $^ -o $@
 
-$(BINDIR)/release/main: $(OBJ)
-	$(LD) $(LDFLAGS) -O3 $^ -o $@
+$(BINDIR)/release/main: $(OBJ:%.o=$(OBJDIR)/release/%.o)
+	$(LD) $(LDFLAGS) $^ -o $@
 
--include $(DEP)
+-include $(DEP: %.d=$(OBJDIR)/$(DRDIR)/%.o)
 
-$(OBJDIR)/%.o: %.c
+$(OBJDIR)/release/%.o: %.c
 	$(CC) -MMD $(CFLAGS) -c -o $@ $< 
+
+$(OBJDIR)/debug/%.o: %.c
+	$(CC) -MMD $(CFLAGS) -c -o $@ $< 
+
 
 print-% : ; @echo $* = $($*)
 
 clean:
-	-rm obj/*.o
 	-rm obj/*/*.o
-	-rm obj/*.d
 	-rm obj/*/*.d
 	-rm bin/*/*
 
