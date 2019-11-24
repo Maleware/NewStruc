@@ -17,7 +17,7 @@ int readInput(char* buf, unsigned int bufsz, unsigned int* outlen)
 			return RI_EOF;
 		if (c == '\n')
 			break;
-		//Do not 'leak' buffsize (actually totally unecessary
+		//Do not 'leak' buffsize (actually totally unecessary)
 		if(pos <= bufsz -2)
 		{
 			buf[pos] = c;
