@@ -3,6 +3,7 @@
 #include "input.h"
 #include "output.h"
 #include "examples.h"
+#include "dynarray.h"
 
 
 int readInput(char* buf, unsigned int bufsz, unsigned int* outlen)
@@ -58,7 +59,10 @@ int interpretInput(const char* in, unsigned int insz, II_Action* action)
 	case 't': // Trial version for executing example Programms
 		*action = ExecuteExample;
 		return 0;
-	case 's':
+	case 'd': // Chapter Dynamic Allocation
+		*action = ExecuteDynArray;
+		return 0;
+	case 's': // Chapter Structure 
 		*action = ExecuteStructure;
 		return 0;
 	case 'a':
@@ -108,6 +112,24 @@ int executeExample(int exNo)
 	return res;
 }
 
+int executeDynArray(int exNo)
+{
+	int res = 0;
+	printout("\n========");
+	indentpush();
+	switch(exNo)
+	{
+	case 0:
+		res=ex10();
+		break;
+	default: res = EE_UNKNOWN_EXNO;
+	}
+	indentpop();
+	printout("========\n");
+	return res;
+}
+
+
 int executeStructure(int exNo)
 {
 	int res = 0;
@@ -130,9 +152,10 @@ int help(void)
 	printout("\n This is the Help-Text for using this Programm ");
 	printout("\n Syntax of the Programm is i.e.' t 0 ' for Example first function");
 	printout("\n --- You may find some programms implementet, following Rheinwerk Computing C von A bis Z ---");
-	printout("\n BASIC's  (h): Print this helptext \t (e) Exit the programm ( ");
-	printout("\n (t) Execute Examples not mentioned in the Book \t (0) Hello World ");
-	printout("\n (s) Exectue programms of Chapter Structure \t (0) \t (1)");
+	printout("\n BASIC's: \n\t (h): Print this helptext \n\t (e) Exit the programm");
+	printout("\n (t) Execute Examples not mentioned in the Book \n\t (0) Hello World ");
+	printout("\n (d) Execute Examples of Chapter Dynamic Storage management	\n\t (0) Function realloc() with dynamic Storage reservation");
+	printout("\n (s) Exectue programms of Chapter Structure \n\t (0) \n\t (1)");
 	printout("\n *************************************************");
 	return 0;
 
@@ -153,6 +176,11 @@ int executeInput(II_Action action, const char* in, unsigned int insz)
 		if (interpretExNo(in, insz, &exNo) < 0)
 			return EI_EX_DETER_FAILED;
 		return executeExample(exNo);
+	case ExecuteDynArray:
+		if (interpretExNo(in, insz, &exNo) < 0)
+			return EI_EX_DETER_FAILED;
+		return executeDynArray(exNo);
+
 	case ExecuteStructure:
 		if (interpretExNo(in, insz, &exNo) < 0)
 			return EI_EX_DETER_FAILED;
