@@ -25,11 +25,14 @@ typedef enum
 	Exit,
 	Help,
 	ExecuteExample,
-	ExecuteAll
+	ExecuteAll,
+	ExecuteStructure
 }II_Action;
 
 int readInput(char* buf, unsigned int bufsz, unsigned int* outlen);
 int interpretInput(const char* in, unsigned int insz, II_Action* action);
 int interpretExNo(const char* in, unsigned int insz, int* exampleNo);
 int executeExample(int exNo);
+int executeStructure(int exNo);
+int help(void);
 int executeInput(II_Action action, const char* in, unsigned int insz);
