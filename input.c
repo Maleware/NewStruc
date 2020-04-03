@@ -150,6 +150,10 @@ int executeStructure(int exNo)
 	switch(exNo)
 	{
 	case 0:
+		res=ex20();
+		break;
+	case 1:
+		res=ex21();
 		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
@@ -172,7 +176,9 @@ int help(void)
 		"\n\t (2) Function for dynamic 2 dim array"
 		"\n\t (3) Function to change allocated memory"
 		"\n\t (4) Splitting required memory");
-	printout("\n (s) Exectue programms of Chapter Structure \n\t (0) \n\t (1)");
+	printout("\n (s) Exectue programms of Chapter Structure"
+		"\n\t (0) First structure of data types "
+	      	"\n\t (1) Second structure with print to see ");
 	printout("\n *************************************************");
 	return 0;
 
