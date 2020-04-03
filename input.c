@@ -128,6 +128,9 @@ int executeDynArray(int exNo)
 	case 2: 
 		res=ex12();
 		break;
+	case 3:
+		res=ex13();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -160,7 +163,11 @@ int help(void)
 	printout("\n --- You may find some programms implementd, following Rheinwerk Computing C von A bis Z ---");
 	printout("\n BASIC's: \n\t (h): Print this helptext \n\t (e) Exit the programm");
 	printout("\n (t) Execute Examples not mentioned in the Book \n\t (0) Hello World ");
-	printout("\n (d) Execute Examples of Chapter Dynamic Storage management	\n\t (0) Function realloc() with dynamic Storage reservation \n\t (1) Function dyn_string1 dynamic storage for strings \n\t (2) function for dynamic 2 dim array");
+	printout("\n (d) Execute Examples of Chapter Dynamic Storage management"
+		"\n\t (0) Function realloc() with dynamic Storage reservation"
+		"\n\t (1) Function dyn_string1 dynamic storage for strings"
+		"\n\t (2) Function for dynamic 2 dim array"
+		"\n\t (3) Function to change allocated memory");
 	printout("\n (s) Exectue programms of Chapter Structure \n\t (0) \n\t (1)");
 	printout("\n *************************************************");
 	return 0;
