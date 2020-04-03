@@ -131,6 +131,9 @@ int executeDynArray(int exNo)
 	case 3:
 		res=ex13();
 		break;
+	case 4:
+		res=ex14();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -167,7 +170,8 @@ int help(void)
 		"\n\t (0) Function realloc() with dynamic Storage reservation"
 		"\n\t (1) Function dyn_string1 dynamic storage for strings"
 		"\n\t (2) Function for dynamic 2 dim array"
-		"\n\t (3) Function to change allocated memory");
+		"\n\t (3) Function to change allocated memory"
+		"\n\t (4) Splitting required memory");
 	printout("\n (s) Exectue programms of Chapter Structure \n\t (0) \n\t (1)");
 	printout("\n *************************************************");
 	return 0;
