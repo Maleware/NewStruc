@@ -4,7 +4,7 @@
 #include "output.h"
 #include "examples.h"
 #include "dynarray.h"
-
+#include "struc.h"
 
 int readInput(char* buf, unsigned int bufsz, unsigned int* outlen)
 {
@@ -155,6 +155,9 @@ int executeStructure(int exNo)
 	case 1:
 		res=ex21();
 		break;
+	case 2:
+		res=ex22();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -178,7 +181,8 @@ int help(void)
 		"\n\t (4) Splitting required memory");
 	printout("\n (s) Exectue programms of Chapter Structure"
 		"\n\t (0) First structure of data types "
-	      	"\n\t (1) Second structure with print to see ");
+	      	"\n\t (1) Second structure with print to see"
+		"\n\t (2) Structure with pointer and Call-by-Value");
 	printout("\n *************************************************");
 	return 0;
 

@@ -1,2 +1,2 @@
 
-int ex20();
+int ex20(void);
