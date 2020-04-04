@@ -158,6 +158,9 @@ int executeStructure(int exNo)
 	case 2:
 		res=ex22();
 		break;
+	case 3:
+		res=ex23();
+		return 0;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -182,7 +185,8 @@ int help(void)
 	printout("\n (s) Exectue programms of Chapter Structure"
 		"\n\t (0) First structure of data types "
 	      	"\n\t (1) Second structure with print to see"
-		"\n\t (2) Structure with pointer and Call-by-Value");
+		"\n\t (2) Structure with pointer and Call-by-Value"
+		"\n\t (3) Structure with dynamic allocation and output fct");
 	printout("\n *************************************************");
 	return 0;
 
