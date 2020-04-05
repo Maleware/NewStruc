@@ -65,3 +65,28 @@ void output5(struct adres *struct_ptr)
 	printf("Place...........:%s",struct_ptr->place);
 	printf("Year of Birth...:%d\n",struct_ptr->yob);
 }
+
+void struct5(void)
+{
+	struct adres *adresses1, *adresses2;
+
+
+	adresses1 = input2();
+	adresses2 = input2();
+
+	if (cmp_structs(adresses1, adresses2)==0)
+	{
+		printf("Adresses are equal, please try again\n");
+	}
+	else
+	{
+		output5(adresses1);
+		output5(adresses2);
+	}
+}
+
+int ex24(void)
+{
+	struct5();
+	return 0;
+}
