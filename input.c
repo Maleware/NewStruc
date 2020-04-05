@@ -164,6 +164,9 @@ int executeStructure(int exNo)
 	case 4:
 		res=ex24();
 		break;
+	case 5:
+		res=ex25();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -190,7 +193,8 @@ int help(void)
 	      	"\n\t (1) Second structure with print to see"
 		"\n\t (2) Structure with pointer and Call-by-Value"
 		"\n\t (3) Structure with dynamic allocation and output fct"
-		"\n\t (4) Structure comparsion between two structures");
+		"\n\t (4) Structure comparsion between two structures"
+		"\n\t (5) Array of strucutres");
 	printout("\n *************************************************");
 	return 0;
 
