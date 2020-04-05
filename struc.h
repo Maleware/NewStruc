@@ -4,3 +4,4 @@
 #include "ex2/struct4.h"
 #include "ex2/struct5.h"
 #include "ex2/struct_arr1.h"
+#include "ex2/struct_arr2.h"

@@ -167,6 +167,9 @@ int executeStructure(int exNo)
 	case 5:
 		res=ex25();
 		break;
+	case 6:
+		res=ex26();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -194,7 +197,8 @@ int help(void)
 		"\n\t (2) Structure with pointer and Call-by-Value"
 		"\n\t (3) Structure with dynamic allocation and output fct"
 		"\n\t (4) Structure comparsion between two structures"
-		"\n\t (5) Array of strucutres");
+		"\n\t (5) Array of strucutres"
+		"\n\t (6) Storage, sort, search and print of max 100 Adresses");
 	printout("\n *************************************************");
 	return 0;
 
