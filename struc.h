@@ -7,3 +7,4 @@
 #include "ex2/struct_arr2.h"
 #include "ex2/nested_struct2.h"
 #include "ex2/union1.h"
+#include "ex2/enum2.h"
