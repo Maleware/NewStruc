@@ -9,3 +9,4 @@
 #include "ex2/union1.h"
 #include "ex2/enum2.h"
 #include "ex2/typedef1.h"
+#include "ex2/alignment.h"

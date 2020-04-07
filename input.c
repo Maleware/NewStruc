@@ -182,6 +182,9 @@ int executeStructure(int exNo)
 	case 10:
 		res=ex210();
 		break;
+	case 11:
+		res=ex211();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -214,7 +217,8 @@ int help(void)
 		"\n\t (7) Organisation programm, 100 Adresses, 20 Meetings"
 		"\n\t (8) Difference between Struct and Union"
 		"\n\t (9) Enum as BOOL listing"
-		"\n\t (10) Adresses with typedef");
+		"\n\t (10) Adresses with typedef"
+		"\n\t (11) Comparesion between packed, enum and original space.");
 	printout("\n *************************************************");
 	return 0;
 
