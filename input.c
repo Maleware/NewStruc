@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include "input.h"
-#include "output.h"
-#include "examples.h"
-#include "dynarray.h"
-#include "struc.h"
+#include "header/input.h"
+#include "header/output.h"
+#include "header/examples.h"
+#include "header/dynarray.h"
+#include "header/struc.h"
+#include "header/IAfunct.h"
 
 int readInput(char* buf, unsigned int bufsz, unsigned int* outlen)
 {
@@ -64,6 +65,9 @@ int interpretInput(const char* in, unsigned int insz, II_Action* action)
 		return 0;
 	case 's': // Chapter Structure 
 		*action = ExecuteStructure;
+		return 0;
+	case 'i': // Chapter Input/Output function
+		*action = ExecuteIAfunct;
 		return 0;
 	case 'a':
 		*action = ExecuteAll;
@@ -192,13 +196,29 @@ int executeStructure(int exNo)
 	return res;
 }
 
+int executeIAfunct(int exNo)
+{
+	int res = 0;
+	printout("\n========");
+	indentpush();
+	switch(exNo)
+	{
+	case 0:
+		break;
+	default: res = EE_UNKNOWN_EXNO;
+	}
+	indentpop();
+	printout("========\n");
+	return res;
+}
+
 int help(void)
 {
 	printout("\n *************************************************");
 	printout("\n This is the Help-Text for using this Programm ");
 	printout("\n Syntax of the Programm is i.e.' t 0 ' for Example first function");
 	printout("\n --- You may find some programms implementd, following Rheinwerk Computing C von A bis Z ---");
-	printout("\n BASIC's: \n\t (h): Print this helptext \n\t (e) Exit the programm");
+	printout("\n BASIC's: \n\t (h) Print this helptext \n\t (e) Exit the programm");
 	printout("\n (t) Execute Examples not mentioned in the Book \n\t (0) Hello World ");
 	printout("\n (d) Execute Examples of Chapter Dynamic Storage management"
 		"\n\t (0) Function realloc() with dynamic Storage reservation"
@@ -248,6 +268,10 @@ int executeInput(II_Action action, const char* in, unsigned int insz)
 		if (interpretExNo(in, insz, &exNo) < 0)
 			return EI_EX_DETER_FAILED;
 		return executeStructure(exNo);
+	case ExecuteIAfunct:
+		if(interpretExNo(in, insz, &exNo) < 0)
+			return EI_EX_DETER_FAILED;
+		return executeIAfunct(exNo);
 	case ExecuteAll:
 		//TODO
 		return 0;

@@ -1,6 +1,6 @@
-#include "main.h"
-#include "output.h"
-#include "input.h"
+#include "header/main.h"
+#include "header/output.h"
+#include "header/input.h"
 
 //TODO Put Input functions in an own file
 
