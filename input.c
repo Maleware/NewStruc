@@ -204,6 +204,7 @@ int executeIAfunct(int exNo)
 	switch(exNo)
 	{
 	case 0:
+		res=ex30();
 		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
@@ -239,6 +240,8 @@ int help(void)
 		"\n\t (9) Enum as BOOL listing"
 		"\n\t (10) Adresses with typedef"
 		"\n\t (11) Comparesion between packed, enum and original space.");
+	printout("\n (i) Execute programs of Chapter Input/Output functions."
+		"\n\t (0) Open data with fopen ");
 	printout("\n *************************************************");
 	return 0;
 
