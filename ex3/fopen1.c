@@ -13,8 +13,14 @@ void fopen1(void)
 	}
 }
 
+void fopen3(void)
+{
+	printf("Max. of open data : %d\n",FOPEN_MAX);
+}
+
 int ex30(void)
 {
 	fopen1();
+	fopen3();
 	return EXIT_SUCCESS;
 }
