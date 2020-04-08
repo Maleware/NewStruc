@@ -206,6 +206,12 @@ int executeIAfunct(int exNo)
 	case 0:
 		res=ex30();
 		break;
+	case 1:
+		res=ex31();
+		break;
+	case 2:
+		res=ex32();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -241,7 +247,9 @@ int help(void)
 		"\n\t (10) Adresses with typedef"
 		"\n\t (11) Comparesion between packed, enum and original space.");
 	printout("\n (i) Execute programs of Chapter Input/Output functions."
-		"\n\t (0) Open data with fopen ");
+		"\n\t (0) Open data with fopen "
+		"\n\t (1) Putchar funciton "
+		"\n\t (2) ECHO function with fgetc echo text to terminal");
 	printout("\n *************************************************");
 	return 0;
 
