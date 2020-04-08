@@ -212,6 +212,9 @@ int executeIAfunct(int exNo)
 	case 2:
 		res=ex32();
 		break;
+	case 3:
+		res=ex33(int argc, char **argv);
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -249,7 +252,8 @@ int help(void)
 	printout("\n (i) Execute programs of Chapter Input/Output functions."
 		"\n\t (0) Open data with fopen "
 		"\n\t (1) Putchar funciton "
-		"\n\t (2) ECHO function with fgetc echo text to terminal");
+		"\n\t (2) ECHO function with fgetc echo text to terminal"
+		"\n\t (3) Reading data by writing in Terminal or after start");
 	printout("\n *************************************************");
 	return 0;
 
