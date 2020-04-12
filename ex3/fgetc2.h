@@ -1,1 +1,1 @@
-int ex33(int argc, char **argv);
+int ex33(void);

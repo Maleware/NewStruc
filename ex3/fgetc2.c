@@ -9,13 +9,13 @@ void read_char(FILE *stream)
 		putchar(c);
 }
 
-int fgetc2(int argc, char **argv)
+int fgetc2(int count, char *path)
 {
 	FILE *file;
 	char filename[255];
 
 	// if file wasn't given by starting the programm
-	if(argc<2)
+	if(count<2)
 	{
 		printf("Which file to open? >");
 		fgets(filename, 255, stdin);
@@ -31,21 +31,29 @@ int fgetc2(int argc, char **argv)
 	}
 	else
 	{
-		file=fopen(argv[1],"r");
+		file=fopen(path[1],"r");
 		if(file != NULL)
 			read_char(file);
 		else
 		{
-			printf("Unable to open %s\n",argv[1]);
+			printf("Unable to open %s\n",path[1]);
 			return EXIT_FAILURE;
 		}
 	}
 	return EXIT_SUCCESS;
 }
 
-int ex33(int argc, char **argv)
+int ex33(void)
 {
-	int r=0;
-	r=fgetc2(argc, argv);
+	int r=0, ccount=0;
+	char path[255];
+
+	printf("Which file should be opend? > ");
+	fgets(path, 255, stdin);
+	if( (path[0]) == '\0' )
+		ccount=1;
+	else
+		ccount=2;
+	r=fgetc2(ccount,path);
 	return r;
 }

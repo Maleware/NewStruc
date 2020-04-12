@@ -213,7 +213,7 @@ int executeIAfunct(int exNo)
 		res=ex32();
 		break;
 	case 3:
-		res=ex33(int argc, char **argv);
+		res=ex33();
 		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
@@ -253,7 +253,7 @@ int help(void)
 		"\n\t (0) Open data with fopen "
 		"\n\t (1) Putchar funciton "
 		"\n\t (2) ECHO function with fgetc echo text to terminal"
-		"\n\t (3) Reading data by writing in Terminal or after start");
+		"\n\t (3) Reading data by writing in Terminal or after start (not working				)");
 	printout("\n *************************************************");
 	return 0;
 
