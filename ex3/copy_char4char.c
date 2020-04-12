@@ -36,6 +36,7 @@ void char4char(void)
 			fclose(source);
 		}
 	}
+	fclose(target);
 }
 
 int ex34(void)
