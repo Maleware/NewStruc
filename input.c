@@ -219,7 +219,7 @@ int executeIAfunct(int exNo)
 		res=ex34();
 		break;
 	case 5:
-		res=ex35();
+		printf("Not working yet.\n");
 		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
@@ -262,7 +262,8 @@ int help(void)
 		"\n\t (3) Reading data by writing in Terminal or after start"
 	       	"\n\t (not working)"
 		"\n\t (4) Copy a file char by char"
-		"\n\t (5) Input and formating csv file");
+		"\n\t (5) Input and formating csv file"
+		"\n\t (not working)");
 	printout("\n *************************************************");
 	return 0;
 
