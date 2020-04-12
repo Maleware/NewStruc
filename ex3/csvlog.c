@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main(int argc, char **argv)
+int csvlog(int count, char *path)
 {
 	FILE *CSV;
 	int login_hour, login_min;
@@ -11,12 +11,12 @@ int main(int argc, char **argv)
 	int logout_hour, logout_min;
 	int date_dayx, date_monx, date_yearx;
 
-	if(argc < 2)
+	if(count < 2)
 	{
-		fprintf(stderr, "Usage : %s file.csv\n", *argv);
+		fprintf(stderr, "Usage : %s file.csv\n", path);
 		return EXIT_FAILURE;
 	}
-	CSV=fopen(argv[1], "r");
+	CSV=fopen(path, "r");
 
 	if(NULL == CSV)
 	{
@@ -38,12 +38,12 @@ int main(int argc, char **argv)
 
 int ex35(void)
 {
-	int r;
-	//char *fpath;
-	//printf("Insert path of csv-file: > ");
-	//scanf("%c", fpath);
-	//c=strlen(fpath);
-	r=main();
+	int c, r;
+	char *fpath='a';
+	printf("Insert path of csv-file: > ");
+	scanf("%c", fpath);
+	c=strlen(fpath);
+	r=csvlog(c, fpath);
 	return r;
 	
 }
