@@ -31,8 +31,9 @@ void char4char(void)
 			// copy char wise from source to target
 			while( (c=getc(source)) != EOF)
 			{
-				putc(c,target);
+				putc(c, target);
 			}
+			fclose(source);
 		}
 	}
 }
