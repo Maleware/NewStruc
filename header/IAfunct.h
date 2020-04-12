@@ -3,3 +3,4 @@
 #include "../ex3/fgetc1.h"
 #include "../ex3/fgetc2.h"
 #include "../ex3/copy_char4char.h"
+#include "../ex3/csvlog.h"

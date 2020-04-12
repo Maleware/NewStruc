@@ -218,6 +218,9 @@ int executeIAfunct(int exNo)
 	case 4:
 		res=ex34();
 		break;
+	case 5:
+		res=ex35();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -258,7 +261,8 @@ int help(void)
 		"\n\t (2) ECHO function with fgetc echo text to terminal"
 		"\n\t (3) Reading data by writing in Terminal or after start"
 	       	"\n\t (not working)"
-		"\n\t (4) Copy a file char by char");
+		"\n\t (4) Copy a file char by char"
+		"\n\t (5) Input and formating csv file");
 	printout("\n *************************************************");
 	return 0;
 
