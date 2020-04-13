@@ -250,6 +250,9 @@ int executeIAfunct(int exNo)
 	case 14:
 		res=ex314();
 		break;
+	case 15:
+		res=ex315();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -299,7 +302,8 @@ int help(void)
 		"\n\t (11) Reading from line 1 to line 2 of file"
 		"\n\t (12) Searching for a string in file"
 		"\n\t (13) Searching for a Word in file"
-		"\n\t (14) Store/print adresses with fwrite and fread");
+		"\n\t (14) Store/print adresses with fwrite and fread"
+		"\n\t (15) Proof if Little or Big Endian");
 	printout("\n *************************************************");
 	return 0;
 

@@ -13,3 +13,4 @@
 #include "../ex3/search_string.h"
 #include "../ex3/search_word.h"
 #include "../ex3/fread_fwrite.h"
+#include "../ex3/endian.h"
