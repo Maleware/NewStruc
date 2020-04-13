@@ -1,7 +1,9 @@
-This is a Testfile,
+This,
 
-we will try to use the function fopen to display containing data.
+is.
 
-Will we?
+a:
 
-WE will!
+Testing'
+
+File""
