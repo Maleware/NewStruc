@@ -5,3 +5,4 @@
 #include "../ex3/copy_char4char.h"
 #include "../ex3/csvlog.h"
 #include "../ex3/feof.h"
+#include "../ex3/grown_file.h"
