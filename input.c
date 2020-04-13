@@ -220,7 +220,8 @@ int executeIAfunct(int exNo)
 		res=ex34();
 		break;
 	case 5:
-		printf("Not working yet.\n");
+		res=ex35();
+		// printf("Not working yet.\n");
 		break;
 	case 6:
 		res=ex36();
@@ -267,10 +268,8 @@ int help(void)
 		"\n\t (1) Putchar funciton "
 		"\n\t (2) ECHO function with fgetc echo text to terminal"
 		"\n\t (3) Reading data by writing in Terminal or after start"
-	       	"\n\t (not working)"
 		"\n\t (4) Copy a file char by char"
 		"\n\t (5) Input and formating csv file"
-		"\n\t (not working)"
 		"\n\t (6) Flag EOF with feof "
 		"\n\t (7) ungetc, write last char bevor EOF in file");
 	printout("\n *************************************************");

@@ -38,12 +38,12 @@ int csvlog(int count, char *path)
 
 int ex35(void)
 {
-	int c, r;
-	char *fpath='a';
+	int ccount=0, r=0;
+	char fpath[255];
 	printf("Insert path of csv-file: > ");
-	scanf("%c", fpath);
-	c=strlen(fpath);
-	r=csvlog(c, fpath);
+	fgets(fpath, 255, stdin);
+	ccount=strlen(fpath);
+	r=csvlog(ccount, fpath);
 	return r;
 	
 }
