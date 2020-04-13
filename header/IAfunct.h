@@ -8,3 +8,4 @@
 #include "../ex3/grown_file.h"
 #include "../ex3/fseek.h"
 #include "../ex3/fgets4.h"
+#include "../ex3/read_nline.h"

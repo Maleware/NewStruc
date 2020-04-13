@@ -235,6 +235,9 @@ int executeIAfunct(int exNo)
 	case 9:
 		res=ex39();
 		break;
+	case 10:
+		res=ex310();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -279,7 +282,8 @@ int help(void)
 		"\n\t (6) Flag EOF with feof "
 		"\n\t (7) ungetc, write last char bevor EOF in file"
 		"\n\t (8) Demonstration of fseek()"
-		"\n\t (9) right usage of fgets by string comparsion");
+		"\n\t (9) right usage of fgets by string comparsion"
+		"\n\t (10) Reading the n'th line of file");
 	printout("\n *************************************************");
 	return 0;
 
