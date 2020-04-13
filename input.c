@@ -247,6 +247,9 @@ int executeIAfunct(int exNo)
 	case 13:
 		res=ex313();
 		break;
+	case 14:
+		res=ex314();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -295,7 +298,8 @@ int help(void)
 		"\n\t (10) Reading the n'th line of file"
 		"\n\t (11) Reading from line 1 to line 2 of file"
 		"\n\t (12) Searching for a string in file"
-		"\n\t (13) Searching for a Word in file");
+		"\n\t (13) Searching for a Word in file"
+		"\n\t (14) Store/print adresses with fwrite and fread");
 	printout("\n *************************************************");
 	return 0;
 

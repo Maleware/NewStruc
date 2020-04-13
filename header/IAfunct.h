@@ -12,3 +12,4 @@
 #include "../ex3/read_line_n2n.h"
 #include "../ex3/search_string.h"
 #include "../ex3/search_word.h"
+#include "../ex3/fread_fwrite.h"
