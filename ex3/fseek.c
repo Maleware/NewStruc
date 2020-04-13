@@ -37,14 +37,14 @@ int fseekf(void)
 	while( (c=getc(source)) !=EOF)
 		putc(c, stdout);
 
-	// Go back 10 chars and print the last 10 chars
+	// Print last 10 chars and print the last 10 chars
 	printf("\n Last 10 chars: \n");
 	fseek(source, -10L, SEEK_CUR);
 	while( (c=getc(source)) != EOF)
 		putc(c, stdout);
 
-	// User decides how many chars to go back
-	printf("\n number of chars to go back (From data start) \n");
+	// User decides how many chars to go be printed
+	printf("\n number of chars not to print from file (From data start) \n");
 	scanf("%ld", &pos);
 	fflush(stdin);
 
@@ -53,6 +53,9 @@ int fseekf(void)
 
 	while( (c=getc(source)) !=EOF)
 		putc(c,stdout);
+
+	fseek(source, 0L, SEEK_END);
+	printf("\n The file has the size of %ld bytes\n", ftell(source));
 	return EXIT_SUCCESS;
 	
 }
