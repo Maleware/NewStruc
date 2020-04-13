@@ -41,7 +41,7 @@ int ex35(void)
 	int ccount=0, r=0;
 	char fpath[255];
 	printf("Insert path of csv-file: > ");
-	fgets(fpath, 255, stdin);
+	scanf("%s",fpath);
 	ccount=strlen(fpath);
 	r=csvlog(ccount, fpath);
 	return r;

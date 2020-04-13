@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void char4char(void)
+int char4char(void)
 {
 	FILE *source, *target;
 	int c;
@@ -9,22 +9,22 @@ void char4char(void)
 
 	printf("Name of the source: >");
 	scanf("%s", name_s);
-	fflush(stdin);
 	source=fopen(name_s,"r");
 
 	if(source == NULL)
 	{
 		printf("Unable to open %s\n", name_s);
-	}
+		return EXIT_FAILURE;
+	}	
 	else
 	{
 		printf("Name of the source data: >");
 		scanf("%s", name_t);
-		fflush(stdin);
 		target=fopen(name_t,"w+");
 		if(target == NULL)
 		{
 			printf("Unable to write target \n");
+			return EXIT_FAILURE;
 		}
 		else
 		{
@@ -37,10 +37,11 @@ void char4char(void)
 		}
 	}
 	fclose(target);
+	return EXIT_SUCCESS;
 }
 
 int ex34(void)
 {
-	char4char();
-	return 0;
+	
+	return char4char();
 }

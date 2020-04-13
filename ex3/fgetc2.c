@@ -18,7 +18,7 @@ int fgetc2(int count, char *path)
 	if(count<2)
 	{
 		printf("Which file to open? >");
-		fgets(filename, 255, stdin);
+		scanf("%s",filename);
 		file=fopen(filename, "r");
 
 		if(file != NULL)
@@ -49,7 +49,7 @@ int ex33(void)
 	char path[255];
 
 	printf("Which file should be opend? > ");
-	fgets(path, 255, stdin);
+	scanf("%s", path);
 	if( (path[0]) == '\n' )
 		ccount=1;
 	else
