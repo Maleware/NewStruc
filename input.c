@@ -241,6 +241,9 @@ int executeIAfunct(int exNo)
 	case 11:
 		res=ex311();
 		break;
+	case 12:
+		res=ex312();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -287,7 +290,8 @@ int help(void)
 		"\n\t (8) Demonstration of fseek()"
 		"\n\t (9) right usage of fgets by string comparsion"
 		"\n\t (10) Reading the n'th line of file"
-		"\n\t (11) Reading from line 1 to line 2 of file");
+		"\n\t (11) Reading from line 1 to line 2 of file"
+		"\n\t (12) Searching for a string in file");
 	printout("\n *************************************************");
 	return 0;
 
