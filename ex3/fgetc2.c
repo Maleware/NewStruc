@@ -31,12 +31,12 @@ int fgetc2(int count, char *path)
 	}
 	else
 	{
-		file=fopen(path[1],"r");
+		file=fopen(path,"r");
 		if(file != NULL)
 			read_char(file);
 		else
 		{
-			printf("Unable to open %s\n",path[1]);
+			printf("Unable to open %s \n",path);
 			return EXIT_FAILURE;
 		}
 	}
@@ -50,7 +50,7 @@ int ex33(void)
 
 	printf("Which file should be opend? > ");
 	fgets(path, 255, stdin);
-	if( (path[0]) == '\0' )
+	if( (path[0]) == '\n' )
 		ccount=1;
 	else
 		ccount=2;

@@ -213,7 +213,8 @@ int executeIAfunct(int exNo)
 		res=ex32();
 		break;
 	case 3:
-		printf("Not working yet.\n");
+		res=ex33();
+		// printf("Not working yet.\n");
 		break;
 	case 4:
 		res=ex34();
