@@ -7,3 +7,4 @@
 #include "../ex3/feof.h"
 #include "../ex3/grown_file.h"
 #include "../ex3/fseek.h"
+#include "../ex3/fgets4.h"
