@@ -229,6 +229,9 @@ int executeIAfunct(int exNo)
 	case 7:
 		res=ex37();
 		break;
+	case 8:
+		res=ex38();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -271,7 +274,8 @@ int help(void)
 		"\n\t (4) Copy a file char by char"
 		"\n\t (5) Input and formating csv file"
 		"\n\t (6) Flag EOF with feof "
-		"\n\t (7) ungetc, write last char bevor EOF in file");
+		"\n\t (7) ungetc, write last char bevor EOF in file"
+		"\n\t (8) Demonstration of fseek()");
 	printout("\n *************************************************");
 	return 0;
 

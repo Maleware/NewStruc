@@ -6,3 +6,4 @@
 #include "../ex3/csvlog.h"
 #include "../ex3/feof.h"
 #include "../ex3/grown_file.h"
+#include "../ex3/fseek.h"
