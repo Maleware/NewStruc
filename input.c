@@ -221,6 +221,9 @@ int executeIAfunct(int exNo)
 	case 5:
 		printf("Not working yet.\n");
 		break;
+	case 6:
+		res=ex36();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -263,7 +266,8 @@ int help(void)
 	       	"\n\t (not working)"
 		"\n\t (4) Copy a file char by char"
 		"\n\t (5) Input and formating csv file"
-		"\n\t (not working)");
+		"\n\t (not working)"
+		"\n\t (6) Flag EOF with feof ");
 	printout("\n *************************************************");
 	return 0;
 
