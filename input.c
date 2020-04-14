@@ -262,6 +262,9 @@ int executeIAfunct(int exNo)
 	case 18:
 		res=ex318();
 		break;
+	case 19:
+		res=ex319();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -315,7 +318,9 @@ int help(void)
 		"\n\t (15) Proof if Little or Big Endian"
 		"\n\t (16) unrestoreable delte"
 		"\n\t (17) Create file and tmp and change file"
-		"\n\t (18) Read and write formated strings with sscanf");
+		"\n\t (18) Read and write formated strings with sscanf"
+		"\n\t From here on we only have low level functions:"
+		"\n\t (19) Function open() creats a testfile");
 	printout("\n *************************************************");
 	return 0;
 
