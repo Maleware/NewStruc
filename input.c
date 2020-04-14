@@ -265,6 +265,9 @@ int executeIAfunct(int exNo)
 	case 19:
 		res=ex319();
 		break;
+	case 20:
+		res=ex320();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -320,7 +323,8 @@ int help(void)
 		"\n\t (17) Create file and tmp and change file"
 		"\n\t (18) Read and write formated strings with sscanf"
 		"\n\t From here on we only have low level functions:"
-		"\n\t (19) Function open() creats a testfile");
+		"\n\t (19) Function open() creats a testfile"
+		"\n\t (20) Function close() open() creates testfile");
 	printout("\n *************************************************");
 	return 0;
 

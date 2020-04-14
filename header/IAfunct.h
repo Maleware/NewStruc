@@ -18,3 +18,4 @@
 #include "../ex3/a_tempfile.h"
 #include "../ex3/form.h"
 #include "../ex3/open1.h"
+#include "../ex3/close.h"
