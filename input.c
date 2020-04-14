@@ -6,6 +6,7 @@
 #include "header/dynarray.h"
 #include "header/struc.h"
 #include "header/IAfunct.h"
+#include "header/AtFiDi.h"
 
 int readInput(char* buf, unsigned int bufsz, unsigned int* outlen)
 {
@@ -69,6 +70,8 @@ int interpretInput(const char* in, unsigned int insz, II_Action* action)
 	case 'i': // Chapter Input/Output function
 		*action = ExecuteIAfunct;
 		return 0;
+	case 'f': // Chapter attributes of files and working with directories
+		*action = ExecuteAtFiDi;
 	case 'a':
 		*action = ExecuteAll;
 		return 0;
@@ -214,14 +217,12 @@ int executeIAfunct(int exNo)
 		break;
 	case 3:
 		res=ex33();
-		// printf("Not working yet.\n");
 		break;
 	case 4:
 		res=ex34();
 		break;
 	case 5:
 		res=ex35();
-		// printf("Not working yet.\n");
 		break;
 	case 6:
 		res=ex36();
@@ -284,6 +285,19 @@ int executeIAfunct(int exNo)
 	return res;
 }
 
+int executeIAfunct(int exNo)
+{
+	int res = 0;
+	printout("\n========");
+	indentpush();
+	switch(exNo)
+	{
+	default: res = EE_UNKNOWN_EXNO;
+	}
+	indentpop();
+	printout("========\n");
+	return res;
+}	
 int help(void)
 {
 	printout("\n *************************************************");
@@ -337,6 +351,8 @@ int help(void)
 		"\n\t (21) Function write with static text from buffer"
 		"\n\t (22) Function customer storage with open(), read() and write()"
 		"\n\t (23) Function fileno and numbers of some files");
+	printout("\n (f) Execute programs of chapter Attributes of files and "
+			"directories (not ANSI C)");
 	printout("\n *************************************************");
 	return 0;
 
@@ -370,6 +386,10 @@ int executeInput(II_Action action, const char* in, unsigned int insz)
 		if(interpretExNo(in, insz, &exNo) < 0)
 			return EI_EX_DETER_FAILED;
 		return executeIAfunct(exNo);
+	case ExecuteAtFiDi:
+		if(interpretExNo(in, insz, &exNo) < 0)
+			return EI_EX_DETER_FAILED;
+		return executeAtFiDi(exNo)
 	case ExecuteAll:
 		//TODO
 		return 0;
