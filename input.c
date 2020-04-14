@@ -271,6 +271,9 @@ int executeIAfunct(int exNo)
 	case 21:
 		res=ex321();
 		break;
+	case 22:
+		res=ex322();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -328,7 +331,8 @@ int help(void)
 		"\n\t From here on we only have low level functions:"
 		"\n\t (19) Function open() creats a testfile"
 		"\n\t (20) Function close() open() creates testfile"
-		"\n\t (21) Function write with static text from buffer");
+		"\n\t (21) Function write with static text from buffer"
+		"\n\t (22) Function customer storage with open(), read() and write()");
 	printout("\n *************************************************");
 	return 0;
 

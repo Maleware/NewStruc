@@ -20,3 +20,4 @@
 #include "../ex3/open1.h"
 #include "../ex3/close.h"
 #include "../ex3/write1.h"
+#include "../ex3/read3.h"
