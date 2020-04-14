@@ -259,6 +259,9 @@ int executeIAfunct(int exNo)
 	case 17:
 		res=ex317();
 		break;
+	case 18:
+		res=ex318();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -311,7 +314,8 @@ int help(void)
 		"\n\t (14) Store/print adresses with fwrite and fread"
 		"\n\t (15) Proof if Little or Big Endian"
 		"\n\t (16) unrestoreable delte"
-		"\n\t (17) Create file and tmp and change file");
+		"\n\t (17) Create file and tmp and change file"
+		"\n\t (18) Read and write formated strings with sscanf");
 	printout("\n *************************************************");
 	return 0;
 

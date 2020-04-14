@@ -16,3 +16,4 @@
 #include "../ex3/endian.h"
 #include "../ex3/shredder.h"
 #include "../ex3/a_tempfile.h"
+#include "../ex3/form.h"
