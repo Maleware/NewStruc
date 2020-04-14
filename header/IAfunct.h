@@ -15,3 +15,4 @@
 #include "../ex3/fread_fwrite.h"
 #include "../ex3/endian.h"
 #include "../ex3/shredder.h"
+#include "../ex3/a_tempfile.h"
