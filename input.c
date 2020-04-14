@@ -72,6 +72,7 @@ int interpretInput(const char* in, unsigned int insz, II_Action* action)
 		return 0;
 	case 'f': // Chapter attributes of files and working with directories
 		*action = ExecuteAtFiDi;
+		return 0;
 	case 'a':
 		*action = ExecuteAll;
 		return 0;
@@ -285,7 +286,7 @@ int executeIAfunct(int exNo)
 	return res;
 }
 
-int executeIAfunct(int exNo)
+int executeAtFiDi(int exNo)
 {
 	int res = 0;
 	printout("\n========");
@@ -389,7 +390,7 @@ int executeInput(II_Action action, const char* in, unsigned int insz)
 	case ExecuteAtFiDi:
 		if(interpretExNo(in, insz, &exNo) < 0)
 			return EI_EX_DETER_FAILED;
-		return executeAtFiDi(exNo)
+		return executeAtFiDi(exNo);
 	case ExecuteAll:
 		//TODO
 		return 0;
