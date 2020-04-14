@@ -21,7 +21,7 @@ void create_textfile(void)
 int tempfile(void)
 {
 	FILE *in, *out;
-	char line[80], *tmp;
+	char line[80], tmp[255];
 	int line_nr=1;
 
 	// Create file with value string
@@ -34,9 +34,11 @@ int tempfile(void)
 		fprintf(stderr,"Unable to create file...\n");
 		return EXIT_FAILURE;
 	}
-	 tmp =tmpnam(NULL); // create temporal file, do not use since dangerours
+	// tmp =tmpnam(NULL);  create temporal file, do not use since dangerours
 	// open temp file to write
-	out=fopen(tmp, "w");	
+	// out=fopen(tmp, "w");	
+	mkstemp(tmp);
+	out = fopen(tmp, "w");
 	
 	if(NULL == out)
 	{
