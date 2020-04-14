@@ -274,6 +274,9 @@ int executeIAfunct(int exNo)
 	case 22:
 		res=ex322();
 		break;
+	case 23:
+		res=ex323();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -332,7 +335,8 @@ int help(void)
 		"\n\t (19) Function open() creats a testfile"
 		"\n\t (20) Function close() open() creates testfile"
 		"\n\t (21) Function write with static text from buffer"
-		"\n\t (22) Function customer storage with open(), read() and write()");
+		"\n\t (22) Function customer storage with open(), read() and write()"
+		"\n\t (23) Function fileno and numbers of some files");
 	printout("\n *************************************************");
 	return 0;
 
