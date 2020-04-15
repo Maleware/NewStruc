@@ -336,6 +336,12 @@ int executeWwvla(int exNo)
 	case 2:
 		res=ex52();
 		break;
+	case 3:
+		res=ex53();
+		break;
+	case 4:
+		res=ex54();
+		break;
 		
 	default: res = EE_UNKNOWN_EXNO;
 	}
@@ -407,7 +413,9 @@ int help(void)
 			" lists"
 		"\n\t (0) Sum numbers with stdarg.h"
 		"\n\t (1) Sum a defined number of numbers"
-		"\n\t (2) Add multible strings");
+		"\n\t (2) Add multible strings"
+		"\n\t (3) Printf simulated with vprintf"
+		"\n\t (4) Error management");
 	printout("\n *************************************************");
 	return 0;
 
