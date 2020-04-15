@@ -74,6 +74,9 @@ int interpretInput(const char* in, unsigned int insz, II_Action* action)
 	case 'f': // Chapter attributes of files and working with directories
 		*action = ExecuteAtFiDi;
 		return 0;
+	case 'w': // Chapter working with variable long argumentlists
+		*action = ExecuteWwvla;
+		return 0;
 	case 'a':
 		*action = ExecuteAll;
 		return 0;
@@ -323,7 +326,9 @@ int executeWwvla(int exNo)
 	printout("\n========");
 	indentpush();
 	switch(exNo)
-	{		
+	{
+	case 0: fprintf(stdout,"inital print\n");
+		break;		
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
