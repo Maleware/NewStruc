@@ -329,7 +329,11 @@ int executeWwvla(int exNo)
 	{
 	case 0: 
 		res=ex50();
-		break;		
+		break;	
+	case 1:
+		res=ex51();
+		break;
+		
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -398,7 +402,8 @@ int help(void)
 		"\n\t (4) Delete on unix non-empty directories");
 	printout("\n (w) Execute programs of chapter Working with variable long argument"
 			" lists"
-		"\n\t (0) Sum numbers with stdarg.h");
+		"\n\t (0) Sum numbers with stdarg.h"
+		"\n\t (1) Sum a defined number of numbers");
 	printout("\n *************************************************");
 	return 0;
 
