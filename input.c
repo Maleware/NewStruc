@@ -7,6 +7,7 @@
 #include "header/struc.h"
 #include "header/IAfunct.h"
 #include "header/AtFiDi.h"
+#include "header/Wwvla.h"
 
 int readInput(char* buf, unsigned int bufsz, unsigned int* outlen)
 {
@@ -313,7 +314,22 @@ int executeAtFiDi(int exNo)
 	indentpop();
 	printout("========\n");
 	return res;
-}	
+}
+
+
+int executeWwvla(int exNo)
+{
+	int res = 0;
+	printout("\n========");
+	indentpush();
+	switch(exNo)
+	{		
+	default: res = EE_UNKNOWN_EXNO;
+	}
+	indentpop();
+	printout("========\n");
+	return res;
+}
 int help(void)
 {
 	printout("\n *************************************************");
@@ -374,6 +390,8 @@ int help(void)
 		"\n\t (2) Change directory and create a \"testfile\""
 		"\n\t (3) Delete created\"testfile\" in desired directory (only empty)"
 		"\n\t (4) Delete on unix non-empty directories");
+	printout("\n (w) Execute programs of chapter Working with variable long argument"
+			" lists");
 	printout("\n *************************************************");
 	return 0;
 
@@ -411,6 +429,10 @@ int executeInput(II_Action action, const char* in, unsigned int insz)
 		if(interpretExNo(in, insz, &exNo) < 0)
 			return EI_EX_DETER_FAILED;
 		return executeAtFiDi(exNo);
+	case ExecuteWwvla:
+		if(interpretExNo(in, insz, &exNo) < 0)
+			return EI_EX_DETER_FAILED;
+		return executeWwvla(exNo);
 	case ExecuteAll:
 		//TODO
 		return 0;

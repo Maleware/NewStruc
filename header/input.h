@@ -30,6 +30,7 @@ typedef enum
 	ExecuteDynArray,
 	ExecuteIAfunct,
 	ExecuteAtFiDi,
+	ExecuteWwvla,
 }II_Action;
 
 int readInput(char* buf, unsigned int bufsz, unsigned int* outlen);
@@ -40,5 +41,6 @@ int executeStructure(int exNo);
 int executeDynArray(int exNo);
 int executeIAfunct(int exNo);
 int executeAtFiDi(int exNo);
+int executeWwvla(int exNO);
 int help(void);
 int executeInput(II_Action action, const char* in, unsigned int insz);
