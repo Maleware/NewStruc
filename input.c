@@ -302,6 +302,9 @@ int executeAtFiDi(int exNo)
 	case 2:
 		res=ex42();
 		break;
+	case 3:
+		res=ex43();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -365,7 +368,8 @@ int help(void)
 			"directories (not ANSI C)"
 		"\n\t (0) Check which kind of file is input"
 		"\n\t (1) Create new directory"
-		"\n\t (2) Change directory and create a \"testfile\"");
+		"\n\t (2) Change directory and create a \"testfile\""
+		"\n\t (3) Delete created\"testfile\" in desired directory");
 	printout("\n *************************************************");
 	return 0;
 
