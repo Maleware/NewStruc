@@ -333,6 +333,9 @@ int executeWwvla(int exNo)
 	case 1:
 		res=ex51();
 		break;
+	case 2:
+		res=ex52();
+		break;
 		
 	default: res = EE_UNKNOWN_EXNO;
 	}
@@ -403,7 +406,8 @@ int help(void)
 	printout("\n (w) Execute programs of chapter Working with variable long argument"
 			" lists"
 		"\n\t (0) Sum numbers with stdarg.h"
-		"\n\t (1) Sum a defined number of numbers");
+		"\n\t (1) Sum a defined number of numbers"
+		"\n\t (2) Add multible strings");
 	printout("\n *************************************************");
 	return 0;
 
