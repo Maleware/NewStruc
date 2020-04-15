@@ -305,6 +305,9 @@ int executeAtFiDi(int exNo)
 	case 3:
 		res=ex43();
 		break;
+	case 4:
+		res=ex44();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -369,7 +372,8 @@ int help(void)
 		"\n\t (0) Check which kind of file is input"
 		"\n\t (1) Create new directory"
 		"\n\t (2) Change directory and create a \"testfile\""
-		"\n\t (3) Delete created\"testfile\" in desired directory");
+		"\n\t (3) Delete created\"testfile\" in desired directory (only empty)"
+		"\n\t (4) Delete on unix non-empty directories");
 	printout("\n *************************************************");
 	return 0;
 
