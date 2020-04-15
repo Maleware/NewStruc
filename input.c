@@ -327,7 +327,8 @@ int executeWwvla(int exNo)
 	indentpush();
 	switch(exNo)
 	{
-	case 0: fprintf(stdout,"inital print\n");
+	case 0: 
+		res=ex50();
 		break;		
 	default: res = EE_UNKNOWN_EXNO;
 	}
@@ -396,7 +397,8 @@ int help(void)
 		"\n\t (3) Delete created\"testfile\" in desired directory (only empty)"
 		"\n\t (4) Delete on unix non-empty directories");
 	printout("\n (w) Execute programs of chapter Working with variable long argument"
-			" lists");
+			" lists"
+		"\n\t (0) Sum numbers with stdarg.h");
 	printout("\n *************************************************");
 	return 0;
 
