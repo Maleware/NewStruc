@@ -293,6 +293,9 @@ int executeAtFiDi(int exNo)
 	indentpush();
 	switch(exNo)
 	{
+	case 0:
+		res=ex40();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -353,7 +356,8 @@ int help(void)
 		"\n\t (22) Function customer storage with open(), read() and write()"
 		"\n\t (23) Function fileno and numbers of some files");
 	printout("\n (f) Execute programs of chapter Attributes of files and "
-			"directories (not ANSI C)");
+			"directories (not ANSI C)"
+		"\n\t (0) Check which kind of file is input");
 	printout("\n *************************************************");
 	return 0;
 
