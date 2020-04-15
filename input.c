@@ -296,6 +296,9 @@ int executeAtFiDi(int exNo)
 	case 0:
 		res=ex40();
 		break;
+	case 1:
+		res=ex41();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -357,7 +360,8 @@ int help(void)
 		"\n\t (23) Function fileno and numbers of some files");
 	printout("\n (f) Execute programs of chapter Attributes of files and "
 			"directories (not ANSI C)"
-		"\n\t (0) Check which kind of file is input");
+		"\n\t (0) Check which kind of file is input"
+		"\n\t (1) Create new directory");
 	printout("\n *************************************************");
 	return 0;
 
