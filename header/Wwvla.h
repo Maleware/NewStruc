@@ -6,3 +6,4 @@
 #include "../ex5/variadic1.h"
 #include "../ex5/time1.h"
 #include "../ex5/time2.h"
+#include "../ex5/time3.h"
