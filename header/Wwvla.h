@@ -3,3 +3,4 @@
 #include "../ex5/strxcat.h"
 #include "../ex5/my_printf.h"
 #include "../ex5/error_handling.h"
+#include "../ex5/variadic1.h"
