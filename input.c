@@ -8,6 +8,7 @@
 #include "header/IAfunct.h"
 #include "header/AtFiDi.h"
 #include "header/Wwvla.h"
+#include "header/Ahaf.h"
 
 int readInput(char* buf, unsigned int bufsz, unsigned int* outlen)
 {
@@ -76,6 +77,9 @@ int interpretInput(const char* in, unsigned int insz, II_Action* action)
 		return 0;
 	case 'w': // Chapter working with variable long argumentlists
 		*action = ExecuteWwvla;
+		return 0;
+	case 'm':
+		*action = ExecuteAhaf;
 		return 0;
 	case 'a':
 		*action = ExecuteAll;
@@ -364,6 +368,28 @@ int executeWwvla(int exNo)
 	printout("========\n");
 	return res;
 }
+
+int executeAhaf(int exNo)
+{
+	int res = 0;
+	printout("\n========");
+	indentpush();
+	switch(exNo)
+	{
+	case 0: 
+		res=ex60();
+		break;
+	case 1: 
+		fprintf(stderr, "Caused problems, not implemented\n");
+		//res=ex61();
+		break;
+	default: res = EE_UNKNOWN_EXNO;
+	}
+	indentpop();
+	printout("========\n");
+	return res;
+}
+
 int help(void)
 {
 	printout("\n *************************************************");
@@ -437,6 +463,9 @@ int help(void)
 		"\n\t (7) Function to calc age in year month and day"
 		"\n\t (8) Function to calc Weekday out of date"
 		"\n\t (9) Print runtime of program");
+	printout("\n (m) Execute programs of chapter Additonal Header and functions (ANSI C)"
+		"\n\t (0) Error proof with assert.h (ignored with NDEBUG)"
+		"\n\t (1) Using math.h to calc some stuff (Not implemented)");
 	printout("\n**************************************************");
 	return 0;
 
@@ -478,6 +507,10 @@ int executeInput(II_Action action, const char* in, unsigned int insz)
 		if(interpretExNo(in, insz, &exNo) < 0)
 			return EI_EX_DETER_FAILED;
 		return executeWwvla(exNo);
+	case ExecuteAhaf:
+		if(interpretExNo(in, insz, &exNo) < 0)
+			return EI_EX_DETER_FAILED;
+		return executeAhaf(exNo);	
 	case ExecuteAll:
 		//TODO
 		return 0;

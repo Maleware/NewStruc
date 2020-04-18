@@ -1,5 +1,5 @@
 CC = /usr/bin/gcc
-CFLAGS =  -Wall -Wpedantic -Wextra -Wstrict-aliasing -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wcast-align -Wstrict-prototypes -Wunreachable-code
+CFLAGS =  -Wall -Wpedantic -Wextra -Wstrict-aliasing -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wcast-align -Wstrict-prototypes -Wunreachable-code -lm
 
 LD = /usr/bin/gcc
 LDFLAGS = 
