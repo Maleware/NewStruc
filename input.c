@@ -354,6 +354,9 @@ int executeWwvla(int exNo)
 	case 8:
 		res=ex58();
 		break;
+	case 9:
+		res=ex59();
+		break;
 		
 	default: res = EE_UNKNOWN_EXNO;
 	}
@@ -432,8 +435,9 @@ int help(void)
 		"\n From here on the functions are from chapter time routines"
 		"\n\t (6) Function to print the system time"
 		"\n\t (7) Function to calc age in year month and day"
-		"\n\t (8) Function to calc Weekday out of date");
-	printout("\n *************************************************");
+		"\n\t (8) Function to calc Weekday out of date"
+		"\n\t (9) Print runtime of program");
+	printout("\n**************************************************");
 	return 0;
 
 }
