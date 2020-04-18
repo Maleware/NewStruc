@@ -4,3 +4,5 @@
 #include "../ex5/my_printf.h"
 #include "../ex5/error_handling.h"
 #include "../ex5/variadic1.h"
+#include "../ex5/time1.h"
+#include "../ex5/time2.h"

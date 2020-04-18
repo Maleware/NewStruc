@@ -345,6 +345,12 @@ int executeWwvla(int exNo)
 	case 5:
 		res=ex55();
 		break;
+	case 6:
+		res=ex56();
+		break;
+	case 7:
+		res=ex57();
+		break;
 		
 	default: res = EE_UNKNOWN_EXNO;
 	}
@@ -413,13 +419,16 @@ int help(void)
 		"\n\t (3) Delete created\"testfile\" in desired directory (only empty)"
 		"\n\t (4) Delete on unix non-empty directories");
 	printout("\n (w) Execute programs of chapter Working with variable long argument"
-			" lists"
+			" lists and time routines"
 		"\n\t (0) Sum numbers with stdarg.h"
 		"\n\t (1) Sum a defined number of numbers"
 		"\n\t (2) Add multible strings"
 		"\n\t (3) Printf simulated with vprintf"
 		"\n\t (4) Error management"
-		"\n\t (5) Macro with abitrary many arguments");
+		"\n\t (5) Macro with abitrary many arguments"
+		"\n From here on the functions are from chapter time routines"
+		"\n\t (6) Function to print the system time"
+		"\n\t (7) Function to calc age in year month and day");
 	printout("\n *************************************************");
 	return 0;
 
