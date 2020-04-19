@@ -393,6 +393,15 @@ int executeAhaf(int exNo)
 	case 4:
 		res=ex64();
 		break;
+	case 5:
+		res=ex65();
+		break;
+	case 6:
+		res=ex66();
+		break;
+	case 7:
+		res=ex67();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -478,7 +487,10 @@ int help(void)
 		"\n\t (1) Using math.h to calc some stuff (Not implemented)"
 		"\n\t (2) Using tgmath.h to calc some sqrt's (Not implemented)"
 		"\n\t (3) Check if double and if long value"
-		"\n\t (4) Convert Integer to string value");
+		"\n\t (4) Convert Integer to string value"
+		"\n\t (5) Pseudo random numbers"
+		"\n\t (6) Random number with setted starting value"
+		"\n\t (7) Random number with function time()");
 	printout("\n**************************************************");
 	return 0;
 
