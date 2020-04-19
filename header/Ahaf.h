@@ -10,4 +10,5 @@
 #include "../ex6/bsearch.h"
 #include "../ex6/setjmp.h"
 #include "../ex6/simple_shell.h"
+#include "../ex6/raise_signal.h"
 

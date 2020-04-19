@@ -414,6 +414,9 @@ int executeAhaf(int exNo)
 	case 11:
 		res=ex611();
 		break;
+	case 12:
+		res=ex612();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -506,7 +509,8 @@ int help(void)
 		"\n\t (8) Sort values with qsort"
 		"\n\t (9) Search for a word in file with bsearch"
 		"\n\t (10) Jump through programm with setjmp.h"
-		"\n\t (11) A simple shell without functions");
+		"\n\t (11) A simple shell without functions"
+		"\n\t (12) trigger SIGINT with raise()");
 	printout("\n**************************************************");
 	return 0;
 
