@@ -8,4 +8,5 @@
 #include "../ex6/random3.h"
 #include "../ex6/qsort.h"
 #include "../ex6/bsearch.h"
+#include "../ex6/setjmp.h"
 
