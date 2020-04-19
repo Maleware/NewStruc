@@ -390,6 +390,9 @@ int executeAhaf(int exNo)
 	case 3:
 		res=ex63();
 		break;
+	case 4:
+		res=ex64();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -474,7 +477,8 @@ int help(void)
 		"\n\t (0) Error proof with assert.h (ignored with NDEBUG)"
 		"\n\t (1) Using math.h to calc some stuff (Not implemented)"
 		"\n\t (2) Using tgmath.h to calc some sqrt's (Not implemented)"
-		"\n\t (3) Check if double and if long value");
+		"\n\t (3) Check if double and if long value"
+		"\n\t (4) Convert Integer to string value");
 	printout("\n**************************************************");
 	return 0;
 
