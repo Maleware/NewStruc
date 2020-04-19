@@ -387,6 +387,9 @@ int executeAhaf(int exNo)
 		fprintf(stderr, "Caused problems, not implemented\n");
 		//res=ex62();
 		break;
+	case 3:
+		res=ex63();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -470,7 +473,8 @@ int help(void)
 	printout("\n (m) Execute programs of chapter Additonal Header and functions (ANSI C)"
 		"\n\t (0) Error proof with assert.h (ignored with NDEBUG)"
 		"\n\t (1) Using math.h to calc some stuff (Not implemented)"
-		"\n\t (2) Using tgmath.h to calc some sqrt's (Not implemented)");
+		"\n\t (2) Using tgmath.h to calc some sqrt's (Not implemented)"
+		"\n\t (3) Check if double and if long value");
 	printout("\n**************************************************");
 	return 0;
 
