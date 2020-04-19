@@ -428,6 +428,9 @@ int executeAhaf(int exNo)
 		break;
 	case 16:
 		res=ex616();
+		break;
+	case 17:
+		res=ex617();
 		break;		
 	default: res = EE_UNKNOWN_EXNO;
 	}
@@ -526,7 +529,8 @@ int help(void)
 		"\n\t (13) Search for char with memchr()"
 		"\n\t (14) Compare a fixed number of bytes with memcmp()"
 		"\n\t (15) Repalce a word in a string with memcpy()"
-		"\n\t (16) Copy 10 bytes of string with memmove()");
+		"\n\t (16) Copy 10 bytes of string with memmove()"
+		"\n\t (17) Cut string with memset()");
 	printout("\n**************************************************");
 	return 0;
 
