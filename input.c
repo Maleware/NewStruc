@@ -420,6 +420,9 @@ int executeAhaf(int exNo)
 	case 13:
 		res=ex613();
 		break;
+	case 14:
+		res=ex614();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -514,7 +517,8 @@ int help(void)
 		"\n\t (10) Jump through programm with setjmp.h"
 		"\n\t (11) A simple shell without functions"
 		"\n\t (12) trigger SIGINT with raise()"
-		"\n\t (13) Search for char with memchr()");
+		"\n\t (13) Search for char with memchr()"
+		"\n\t (14) Compare a fixed number of bytes with memcmp()");
 	printout("\n**************************************************");
 	return 0;
 

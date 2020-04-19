@@ -12,4 +12,5 @@
 #include "../ex6/simple_shell.h"
 #include "../ex6/raise_signal.h"
 #include "../ex6/memchr.h"
+#include "../ex6/memcmp.h"
 
