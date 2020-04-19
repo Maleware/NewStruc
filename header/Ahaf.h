@@ -14,4 +14,5 @@
 #include "../ex6/memchr.h"
 #include "../ex6/memcmp.h"
 #include "../ex6/memcpy.h"
+#include "../ex6/memmove.h"
 

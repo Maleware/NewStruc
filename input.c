@@ -425,6 +425,9 @@ int executeAhaf(int exNo)
 		break;
 	case 15:
 		res=ex615();
+		break;
+	case 16:
+		res=ex616();
 		break;		
 	default: res = EE_UNKNOWN_EXNO;
 	}
@@ -522,7 +525,8 @@ int help(void)
 		"\n\t (12) trigger SIGINT with raise()"
 		"\n\t (13) Search for char with memchr()"
 		"\n\t (14) Compare a fixed number of bytes with memcmp()"
-		"\n\t (15) Repalce a word in a string with memcpy()");
+		"\n\t (15) Repalce a word in a string with memcpy()"
+		"\n\t (16) Copy 10 bytes of string with memmove()");
 	printout("\n**************************************************");
 	return 0;
 
