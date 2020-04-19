@@ -6,4 +6,6 @@
 #include "../ex6/random1.h"
 #include "../ex6/random2.h"
 #include "../ex6/random3.h"
+#include "../ex6/qsort.h"
+#include "../ex6/bsearch.h"
 

@@ -402,6 +402,12 @@ int executeAhaf(int exNo)
 	case 7:
 		res=ex67();
 		break;
+	case 8:
+		res=ex68();
+		break;
+	case 9:
+		res=ex69();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -490,7 +496,9 @@ int help(void)
 		"\n\t (4) Convert Integer to string value"
 		"\n\t (5) Pseudo random numbers"
 		"\n\t (6) Random number with setted starting value"
-		"\n\t (7) Random number with function time()");
+		"\n\t (7) Random number with function time()"
+		"\n\t (8) Sort values with qsort"
+		"\n\t (9) Search for a word in file with bsearch");
 	printout("\n**************************************************");
 	return 0;
 
