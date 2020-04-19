@@ -9,6 +9,7 @@
 #include "header/AtFiDi.h"
 #include "header/Wwvla.h"
 #include "header/Ahaf.h"
+#include "header/DynDaStr.h"
 
 int readInput(char* buf, unsigned int bufsz, unsigned int* outlen)
 {
@@ -80,6 +81,9 @@ int interpretInput(const char* in, unsigned int insz, II_Action* action)
 		return 0;
 	case 'm':
 		*action = ExecuteAhaf;
+		return 0;
+	case 'k':
+		*action = ExecuteDynDaStr;
 		return 0;
 	case 'a':
 		*action = ExecuteAll;
@@ -439,6 +443,22 @@ int executeAhaf(int exNo)
 	return res;
 }
 
+int executeDynDaStr(int exNo)
+{
+	int res = 0;
+	printout("\n========");
+	indentpush();
+	switch(exNo)
+	{
+	case 0:
+		res=ex70();
+		break;
+	default: res = EE_UNKNOWN_EXNO;
+	}
+	indentpop();
+	printout("========\n");
+	return res;
+}
 int help(void)
 {
 	printout("\n *************************************************");
@@ -531,6 +551,8 @@ int help(void)
 		"\n\t (15) Repalce a word in a string with memcpy()"
 		"\n\t (16) Copy 10 bytes of string with memmove()"
 		"\n\t (17) Cut string with memset()");
+	printout("\n (k) Execute programs of chapter dynamic datastructures"
+		"\n\t (0) Add abitrary many structs to a chain (lin. list)");
 	printout("\n**************************************************");
 	return 0;
 
@@ -575,7 +597,11 @@ int executeInput(II_Action action, const char* in, unsigned int insz)
 	case ExecuteAhaf:
 		if(interpretExNo(in, insz, &exNo) < 0)
 			return EI_EX_DETER_FAILED;
-		return executeAhaf(exNo);	
+		return executeAhaf(exNo);
+	case ExecuteDynDaStr:
+		if(interpretExNo(in, insz, &exNo) < 0)
+			return EI_EX_DETER_FAILED;
+		return executeDynDaStr(exNo);		
 	case ExecuteAll:
 		//TODO
 		return 0;
