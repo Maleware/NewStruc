@@ -10,6 +10,7 @@
 #include "header/Wwvla.h"
 #include "header/Ahaf.h"
 #include "header/DynDaStr.h"
+#include "header/Algo.h"
 
 int readInput(char* buf, unsigned int bufsz, unsigned int* outlen)
 {
@@ -84,6 +85,9 @@ int interpretInput(const char* in, unsigned int insz, II_Action* action)
 		return 0;
 	case 'k':
 		*action = ExecuteDynDaStr;
+		return 0;
+	case 'r':
+		*action = ExecuteAlgo;
 		return 0;
 	case 'a':
 		*action = ExecuteAll;
@@ -465,6 +469,25 @@ int executeDynDaStr(int exNo)
 	printout("========\n");
 	return res;
 }
+
+int executeAlgo(int exNo)
+{
+	int res = 0;
+	printout("\n========");
+	indentpush();
+	switch(exNo)
+	{
+	case 0:
+		res=ex80();
+		break;
+
+	default: res = EE_UNKNOWN_EXNO;
+	}
+	indentpop();
+	printout("========\n");
+	return res;
+}
+
 int help(void)
 {
 	printout("\n *************************************************");
@@ -561,6 +584,8 @@ int help(void)
 		"\n\t (0) Add abitrary many structs to a chain (lin. list)"
 		"\n\t (1) count push and pop's"
 		"\n\t (2) FIFO queue");
+	printout("\n (r) Execute programs of chapter Algorithm"
+		"\n\t (0) Selection-Sort");
 	printout("\n**************************************************");
 	return 0;
 
@@ -610,6 +635,10 @@ int executeInput(II_Action action, const char* in, unsigned int insz)
 		if(interpretExNo(in, insz, &exNo) < 0)
 			return EI_EX_DETER_FAILED;
 		return executeDynDaStr(exNo);		
+	case ExecuteAlgo:
+		if(interpretExNo(in, insz, &exNo) < 0)
+			return EI_EX_DETER_FAILED;
+		return executeAlgo(exNo);
 	case ExecuteAll:
 		//TODO
 		return 0;
