@@ -456,6 +456,9 @@ int executeDynDaStr(int exNo)
 	case 1:
 		res=ex71();
 		break;
+	case 2:
+		res=ex72();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -556,7 +559,8 @@ int help(void)
 		"\n\t (17) Cut string with memset()");
 	printout("\n (k) Execute programs of chapter dynamic datastructures"
 		"\n\t (0) Add abitrary many structs to a chain (lin. list)"
-		"\n\t (1) count push and pop's");
+		"\n\t (1) count push and pop's"
+		"\n\t (2) FIFO queue");
 	printout("\n**************************************************");
 	return 0;
 
