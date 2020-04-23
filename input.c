@@ -480,7 +480,9 @@ int executeAlgo(int exNo)
 	case 0:
 		res=ex80();
 		break;
-
+	case 1:
+		res=ex81();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -585,7 +587,8 @@ int help(void)
 		"\n\t (1) count push and pop's"
 		"\n\t (2) FIFO queue");
 	printout("\n (r) Execute programs of chapter Algorithm"
-		"\n\t (0) Selection-Sort");
+		"\n\t (0) Selection-Sort"
+		"\n\t (1) Insertion-Sort");
 	printout("\n**************************************************");
 	return 0;
 
