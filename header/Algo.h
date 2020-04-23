@@ -2,3 +2,4 @@
 #include "../ex8/insertion.h"
 #include "../ex8/bublle.h"
 #include "../ex8/shellsort.h"
+#include "../ex8/profile_shellsort.h"
