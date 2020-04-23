@@ -486,6 +486,9 @@ int executeAlgo(int exNo)
 	case 2:
 		res=ex82();
 		break;
+	case 3:
+		res=ex83();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -592,7 +595,8 @@ int help(void)
 	printout("\n (r) Execute programs of chapter Algorithm"
 		"\n\t (0) Selection-Sort"
 		"\n\t (1) Insertion-Sort"
-		"\n\t (2) Bubble-Sort");
+		"\n\t (2) Bubble-Sort"
+		"\n\t (3) Shellsort");
 	printout("\n**************************************************");
 	return 0;
 
