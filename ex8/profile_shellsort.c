@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define MAX 10000000
+#define MAX 500000 
 #define MAX_TEST 10
 
 // The array we want to sort
