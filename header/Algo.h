@@ -3,3 +3,4 @@
 #include "../ex8/bublle.h"
 #include "../ex8/shellsort.h"
 #include "../ex8/profile_shellsort.h"
+#include "../ex8/quicksort.h"

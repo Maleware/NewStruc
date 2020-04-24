@@ -492,6 +492,9 @@ int executeAlgo(int exNo)
 	case 4:
 		res=ex84();
 		break;
+	case 5:
+		res=ex85();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -600,7 +603,8 @@ int help(void)
 		"\n\t (1) Insertion-Sort"
 		"\n\t (2) Bubble-Sort"
 		"\n\t (3) Shellsort"
-		"\n\t (4) Runtime comparsion between shellsort and insertion sort");
+		"\n\t (4) Runtime comparsion between shellsort and insertion sort"
+		"\n\t (5) Qicksort with Runtime check");
 	printout("\n**************************************************");
 	return 0;
 
