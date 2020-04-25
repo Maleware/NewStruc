@@ -5,3 +5,4 @@
 #include "../ex8/profile_shellsort.h"
 #include "../ex8/quicksort.h"
 #include "../ex8/profile_quicksort.h"
+#include "../ex8/simple_search.h"
