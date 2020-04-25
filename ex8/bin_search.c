@@ -100,7 +100,7 @@ int bin_search(void)
 			fprintf(stdout, "Corresponding place...>");
 			fgets(new_place, MAX, stdin);
 			insertbs(post, strtok(new_place, "\n"));
-			qsort(zipcodes, N, sizeof(unsigned int), cmp_uinteger);
+			qsort(zipcodes, N-1, sizeof(unsigned int), cmp_uinteger);
 		}
 	}while(select !=3);
 	return EXIT_SUCCESS;
