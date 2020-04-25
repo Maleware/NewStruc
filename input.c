@@ -501,6 +501,9 @@ int executeAlgo(int exNo)
 	case 7:
 		res=ex87();
 		break;
+	case 8:
+		res=ex88();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -612,7 +615,8 @@ int help(void)
 		"\n\t (4) Runtime comparsion between shellsort and insertion sort"
 		"\n\t (5) Qicksort with Runtime check"
 		"\n\t (6) Runtime comparsion between qsort() stdlib.h and selfmade qsort"
-		"\n\t (7) Linear searching for added ZIP-Codes");
+		"\n\t (7) Linear searching for added ZIP-Codes"
+		"\n\t (8) Binary search of qsort()-sorted list");
 	printout("\n**************************************************");
 	return 0;
 
