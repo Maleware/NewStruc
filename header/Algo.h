@@ -7,3 +7,4 @@
 #include "../ex8/profile_quicksort.h"
 #include "../ex8/simple_search.h"
 #include "../ex8/bin_search.h"
+#include "../ex8/btree1.h"
