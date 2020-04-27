@@ -507,6 +507,9 @@ int executeAlgo(int exNo)
 	case 9:
 		res=ex89();
 		break;
+	case 10:
+		res=ex810();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -620,7 +623,8 @@ int help(void)
 		"\n\t (6) Runtime comparsion between qsort() stdlib.h and selfmade qsort"
 		"\n\t (7) Linear searching for added ZIP-Codes"
 		"\n\t (8) Binary search of qsort()-sorted list"
-		"\n\t (9) Binary tree, function without any functions");
+		"\n\t (9) Binary tree, function without any functions"
+		"\n\t (10) Zip-Code list with full binary tree");
 	printout("\n**************************************************");
 	return 0;
 
