@@ -9,3 +9,4 @@
 #include "../ex8/bin_search.h"
 #include "../ex8/btree1.h"
 #include "../ex8/btree3.h"
+#include "../ex8/hashing.h"
