@@ -11,3 +11,4 @@
 #include "../ex8/btree3.h"
 #include "../ex8/hashing.h"
 #include "../ex8/kmp.h"
+#include "../ex8/mister_c1.h"

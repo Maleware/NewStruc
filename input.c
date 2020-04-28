@@ -516,6 +516,9 @@ int executeAlgo(int exNo)
 	case 12:
 		res=ex812();
 		break;
+	case 13:
+		res=ex813();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -632,7 +635,8 @@ int help(void)
 		"\n\t (9) Binary tree, function without any functions"
 		"\n\t (10) Zip-Code list with full binary tree"
 		"\n\t (11) Hashing strings with defined values"
-		"\n\t (12) kmp string search algorithm with fixed string and search");
+		"\n\t (12) kmp string search algorithm with fixed string and search"
+		"\n\t (13) Solving a way from starting point to target with barriers");
 	printout("\n**************************************************");
 	return 0;
 
