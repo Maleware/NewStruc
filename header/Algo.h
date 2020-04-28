@@ -10,3 +10,4 @@
 #include "../ex8/btree1.h"
 #include "../ex8/btree3.h"
 #include "../ex8/hashing.h"
+#include "../ex8/kmp.h"

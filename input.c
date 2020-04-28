@@ -513,6 +513,9 @@ int executeAlgo(int exNo)
 	case 11:
 		res=ex811();
 		break;
+	case 12:
+		res=ex812();
+		break;
 	default: res = EE_UNKNOWN_EXNO;
 	}
 	indentpop();
@@ -628,7 +631,8 @@ int help(void)
 		"\n\t (8) Binary search of qsort()-sorted list"
 		"\n\t (9) Binary tree, function without any functions"
 		"\n\t (10) Zip-Code list with full binary tree"
-		"\n\t (11) Hashing strings with defined values");
+		"\n\t (11) Hashing strings with defined values"
+		"\n\t (12) kmp string search algorithm with fixed string and search");
 	printout("\n**************************************************");
 	return 0;
 
